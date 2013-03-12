@@ -17,16 +17,16 @@
 <!-- Full screen view projects under the status bar and contains the background -->
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher"
+    xmlns:launcher="http://schemas.android.com/apk/res/com.android.my_launcher"
 
     android:id="@+id/launcher"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/workspace_bg">
 
-    <com.android.launcher2.DragLayer
+    <com.android.my_launcher.DragLayer
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:launcher="http://schemas.android.com/apk/res/com.android.launcher"
+        xmlns:launcher="http://schemas.android.com/apk/res/com.android.my_launcher"
 
         android:id="@+id/drag_layer"
         android:background="@drawable/workspace_bg"
@@ -53,7 +53,7 @@
             android:layout_marginBottom="@dimen/button_bar_height" />
 
         <!-- The workspace contains 5 screens of cells -->
-        <com.android.launcher2.Workspace
+        <com.android.my_launcher.Workspace
             android:id="@+id/workspace"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -73,7 +73,7 @@
             <include android:id="@+id/cell3" layout="@layout/workspace_screen" />
             <include android:id="@+id/cell4" layout="@layout/workspace_screen" />
             <include android:id="@+id/cell5" layout="@layout/workspace_screen" />
-        </com.android.launcher2.Workspace>
+        </com.android.my_launcher.Workspace>
 
         <include layout="@layout/hotseat"
             android:id="@+id/hotseat"
@@ -100,7 +100,7 @@
             android:layout_height="match_parent"
             android:visibility="gone" />
 
-        <com.android.launcher2.DrawableStateProxyView
+        <com.android.my_launcher.DrawableStateProxyView
             android:id="@+id/voice_button_proxy"
             android:layout_width="80dp"
             android:layout_height="@dimen/qsb_bar_height"
@@ -115,5 +115,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="invisible" />
-    </com.android.launcher2.DragLayer>
+    </com.android.my_launcher.DragLayer>
 </FrameLayout>

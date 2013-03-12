@@ -19,11 +19,11 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="application_name" msgid="8424725141379931883">"Lanceur d\'applications"</string>
+    <string name="application_name" msgid="8424725141379931883">"Mon Lanceur d\'applications !"</string>
     <string name="home" msgid="5921706419368316758">"Accueil"</string>
     <string name="uid_name" msgid="3371120195364560632">"Applications de base Android"</string>
     <string name="folder_name" msgid="8551881338202938211"></string>
-    <string name="chooser_wallpaper" msgid="6063168087625352235">"Sélectionnez un fond d\'écran dans"</string>
+    <string name="chooser_wallpaper" msgid="6063168087625352235">"Sélectionnez un fond d\'écran dans ta maman"</string>
     <string name="wallpaper_instructions" msgid="4215640646180727542">"Sélectionner"</string>
     <string name="pick_wallpaper" msgid="5630222540525626723">"Fonds d\'écran"</string>
     <string name="activity_not_found" msgid="217823393239365967">"L\'application n\'est pas installée."</string>

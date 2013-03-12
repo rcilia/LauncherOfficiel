@@ -19,9 +19,11 @@
 -->
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.launcher">
+    package="com.android.my_launcher">
 
-    <original-package android:name="com.android.launcher2" />
+    <original-package android:name="com.android.my_launcher" />
+    
+    <uses-sdk android:minSdkVersion="17" android:targetSdkVersion="17" />
 
     <permission
         android:name="com.android.launcher.permission.PRELOAD_WORKSPACE"
@@ -56,20 +58,20 @@
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.SET_WALLPAPER_HINTS" />
     <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.BIND_APPWIDGET" />
+    <!--uses-permission android:name="android.permission.BIND_APPWIDGET" /-->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
 
     <application
-        android:name="com.android.launcher2.LauncherApplication"
+        android:name="com.android.my_launcher.LauncherApplication"
         android:label="@string/application_name"
         android:icon="@mipmap/ic_launcher_home"
         android:hardwareAccelerated="true"
         android:largeHeap="@bool/config_largeHeap"
         android:supportsRtl="true">
         <activity
-            android:name="com.android.launcher2.Launcher"
+            android:name="com.android.my_launcher.Launcher"
             android:launchMode="singleTask"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
@@ -85,7 +87,7 @@
         </activity>
 
         <activity
-            android:name="com.android.launcher2.WallpaperChooser"
+            android:name="com.android.my_launcher.WallpaperChooser"
             android:theme="@style/Theme.WallpaperPicker"
             android:label="@string/pick_wallpaper"
             android:icon="@mipmap/ic_launcher_wallpaper"
@@ -101,7 +103,7 @@
 
         <!-- Intent received used to prepopulate the default workspace. -->
         <receiver
-            android:name="com.android.launcher2.PreloadReceiver"
+            android:name="com.android.my_launcher.PreloadReceiver"
             android:permission="com.android.launcher.permission.PRELOAD_WORKSPACE">
             <intent-filter>
                 <action android:name="com.android.launcher.action.PRELOAD_WORKSPACE" />
@@ -110,7 +112,7 @@
 
         <!-- Intent received used to install shortcuts from other applications -->
         <receiver
-            android:name="com.android.launcher2.InstallShortcutReceiver"
+            android:name="com.android.my_launcher.InstallShortcutReceiver"
             android:permission="com.android.launcher.permission.INSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher.action.INSTALL_SHORTCUT" />
@@ -119,7 +121,7 @@
 
         <!-- Intent received used to uninstall shortcuts from other applications -->
         <receiver
-            android:name="com.android.launcher2.UninstallShortcutReceiver"
+            android:name="com.android.my_launcher.UninstallShortcutReceiver"
             android:permission="com.android.launcher.permission.UNINSTALL_SHORTCUT">
             <intent-filter>
                 <action android:name="com.android.launcher.action.UNINSTALL_SHORTCUT" />
@@ -128,7 +130,7 @@
 
         <!-- New user initialization; set up initial wallpaper -->
         <receiver
-            android:name="com.android.launcher2.UserInitializeReceiver"
+            android:name="com.android.my_launcher.UserInitializeReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.USER_INITIALIZE" />
@@ -137,8 +139,8 @@
         
         <!-- The settings provider contains Home's data, like the workspace favorites -->
         <provider
-            android:name="com.android.launcher2.LauncherProvider"
-            android:authorities="com.android.launcher2.settings"
+            android:name="com.android.my_launcher.LauncherProvider"
+            android:authorities="com.android.my_launcher.settings"
             android:exported="true"
             android:writePermission="com.android.launcher.permission.WRITE_SETTINGS"
             android:readPermission="com.android.launcher.permission.READ_SETTINGS" />
