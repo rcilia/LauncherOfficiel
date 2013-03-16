@@ -274,4 +274,11 @@ s -->
     <!-- Dummy string [CHAR_LIMIT=60] -->
     <string name="custom_workspace_cling_description_2"></string>
 
+    
+    
+    
+    
+    <!-- Launcher menu -->
+    <string name="launcher_menu_settings">Settings</string>
+
 </resources>

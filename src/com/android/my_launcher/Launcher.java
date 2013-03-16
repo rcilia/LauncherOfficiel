@@ -234,6 +234,7 @@ public final class Launcher extends Activity implements View.OnClickListener, Vi
     private boolean mAutoAdvanceRunning = false;
 
     private Bundle mSavedState;
+    
     // We set the state in both onCreate and then onNewIntent in some cases, which causes both
     // scroll issues (because the workspace may not have been measured yet) and extra work.
     // Instead, just save the state that we need to restore Launcher to, and commit it in onResume.
@@ -333,7 +334,6 @@ public final class Launcher extends Activity implements View.OnClickListener, Vi
     
 	// ------------------------------------------------------------------------------------
     // Getters & Setters:
-
     private static boolean isPropertyEnabled(String propertyName) {
     	
         return Log.isLoggable(propertyName, Log.VERBOSE);
@@ -822,9 +822,9 @@ public final class Launcher extends Activity implements View.OnClickListener, Vi
     
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-    	
-        if (isWorkspaceLocked()) { return false; }
 
+        if (isWorkspaceLocked()) { return false; }
+        
         super.onCreateOptionsMenu(menu);
 
         Intent manageApps = new Intent(Settings.ACTION_MANAGE_ALL_APPLICATIONS_SETTINGS);
@@ -858,6 +858,7 @@ public final class Launcher extends Activity implements View.OnClickListener, Vi
                 .setIntent(help)
                 .setAlphabeticShortcut('H');
         }
+        
         return true;
     }
 
@@ -2773,7 +2774,6 @@ public final class Launcher extends Activity implements View.OnClickListener, Vi
         return mHotseat != null && layout != null &&
                 (layout instanceof CellLayout) && (layout == mHotseat.getLayout());
     }
-    
     
     Hotseat getHotseat() {
         return mHotseat;
